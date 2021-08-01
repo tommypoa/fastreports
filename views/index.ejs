@@ -1,0 +1,91 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">Fast Reports</a>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">OOC</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" href="/about">About</a>
+      </li> -->
+    </ul>
+  </nav>
+
+  <div class="container">
+
+    <form class="well form-horizontal" action="/doc" method="post"  id="contact_form">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Create a report</legend>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Cadet Name</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  name="name" placeholder="Name" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Select Basic -->
+   
+<div class="form-group"> 
+  <label class="col-md-4 control-label">Reason</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="reason" class="form-control selectpicker" >
+      <option value=" " >Please select your state</option>
+      <option>Medical</option>
+      <option>15% Lesson Missed</option>
+      <option >PRB</option>
+    </select>
+  </div>
+</div>
+</div>
+
+
+<!-- radio checks -->
+ <div class="form-group">
+    <label class="col-md-4 control-label">Recommended for recourse?</label>
+    <div class="col-md-4">
+        <div class="radio">
+            <label>
+                <input type="radio" name="recommendation" value="yes" /> Yes
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="recommendation" value="no" /> No
+            </label>
+        </div>
+    </div>
+</div>
+
+<!-- Text area -->
+  
+<div class="form-group">
+  <label class="col-md-4 control-label">Additional Comments</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+          <textarea class="form-control" name="comment" placeholder="Additional comments"></textarea>
+  </div>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4">
+    <button type="submit" class="btn btn-warning" >Generate and Download Report <span class="glyphicon glyphicon-send"></span></button>
+  </div>
+</div>
+</fieldset>
+</form>
+</div>
