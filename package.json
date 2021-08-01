@@ -9,6 +9,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "engines" : {
+    "node" : "16.6.0"
+  },
   "type": "module",
   "dependencies": {
     "docx": "^6.0.3",

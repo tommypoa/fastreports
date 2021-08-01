@@ -14,6 +14,10 @@ app.use(express.urlencoded());
 // Parse JSON bodies (as sent by API clients)
 app.use(express.json());
 
+// Port for Heroku
+// process.env.PORT lets the port be set by Heroku
+var port = process.env.PORT || 8080;
+
 /// ROUTES ///
 // Index page
 app.get('/', function(req, res) {
@@ -37,5 +41,6 @@ app.post('/doc', async function(req, res) {
     })
 })
 
-app.listen(8080);
-console.log('Server is listening on port 8080');
+app.listen(port, function() {
+    console.log('App is running on http://localhost:' + port);
+});
